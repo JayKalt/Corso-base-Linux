@@ -1,0 +1,43 @@
++-----------------------------+
+comando: tr
+parametri: -d -c -s
+
+usato singoalrmente chiede in input delle stringhe
+esempio:
+tr a e
+casa
+cese
+...
+
+oppure prende in input un file
+esempio:
+echo "casa" > fil3.txt
+tr ac en < file3.txt
+nese
+
+oppure possiamo usare gruppi di parole
+esempio:
+a-zA-z
+
+oppure:
+echo "questa e' una frase un po' piu lunga con varie parole per esempio 15" > frase2.txt
+tr [:digit:] X < frase2.txt
+tr [:space:] - < ...
+tr [:alpha:] ...
+tr [:lower:] [:upper:]
+
+esempi potenti:
+ls -lh | tr -s " " | cut -d " " -fX
++-----------------------------+
+
+
++-----------------------------+
+comando: sed / editor di flusso
+Si puo' modificare linea per linea qualsiasi cosa
+Totalmente compatibile con le espressioni regolari
+
+parametri: -n -e/-f -r
+
+Sintassi:
+	sed inizio_ubicazione fine_ubicaczione istruzione argomento
++-----------------------------+

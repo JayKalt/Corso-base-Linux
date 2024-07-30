@@ -1,0 +1,42 @@
+Script utili per automatizzare operazioni e usato per
+mettere piu' comandi insieme.
+
+Bisogna fare si che possa essere interpretato dalla shell
+quindi ci sono delle sintassi da rispettare.
+
+Iniziamo a vedere il primo script:
+
+
++---------------------------------+
+| PICCOLO TRUCCHETTO			  |
++---------------------------------+
+per non scrivere ogni volta bin/bash... si puo fare cosi:
+$ > head -n1 script.sh > script2.sh
+In questo modo stiamo dicendo di andare a riscrivere la prima
+linea nel nuovo script.
+
+
+
++---------------------------------+
+| VARIABILI PREDEFINITE			  |
++---------------------------------+
+# $0    ---> script name
+# $$    ---> script process
+# $?    ---> script pid
+
+
++---------------------------------+
+| VARIABILI DI AMBIENTE			  |
++---------------------------------+
+# $PATH    ---> percorso dove sono presenti i binari in esecuzione
+# printvar ---> si vedono tutte le variabili di ambiente se vogliamo consultarlo
+
+
++---------------------------------+
+| VARIABILI						  |
++---------------------------------+
+# var1="This is a string"
+
+Per stampare una variabile:	echo $var1
+Se ci sono piu' variabili per non fare confusione: echo ${var1} ${var2} ...
+

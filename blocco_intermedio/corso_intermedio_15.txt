@@ -1,0 +1,62 @@
+video_5_intermedio
+
+regex, espressioni regolari usate per filtrare e modificare il testo
+in maniera chirurgica e selettiva.
+
+le regex sono compatibili con diversi comandi, noi vedremo grep e ...
+
+
+GREP
+
+.	parola$ dove $ indica che deve finire con quella lettera
+.	^parola dove ^ indica che deve iniziare con quella lettera
+
+.	par..la dove i .. inidicano che ci devono essere 2 caratteri qualsiasi
+.	par[oui]la dove il set [oui] inidica che deve esserci una delle lettere indicate
+
+
+Supponiamo un file composto in questo modo:
+
+	+-----------------------------------------------+
+	| nome; numero; citta; telefono; stipendio; age | 
+	| nome; numero; citta; telefono; stipendio; age | 
+	| nome; numero; citta; telefono; stipendio; age | 
+	| 						.						|
+	| 						.						|
+	| 						.						|
+	+-----------------------------------------------+
+
+.	grep 2.$ | cut -d ";" -f1,6 ---> 	ci seleziona il nome e l'eta delle persone con
+										eta' compresa tra 20-29 anni
+
+.	grep "^[[:upper:]]" file.txt --->	ci selezione tutte le righe che hanno come prima
+										lettera un qualsiasi (*) carattere maisucolo
+.	grep 'c[^aei]s[^a-c]' /etc/dict/american-dictionary -->	ci prende solo le parole che
+															NON hanno nella posizione delle
+															[] le lettere specificate
+.	--color ci colorizza quello che ci interessa
+.	grep -E 'the[[:alpha:]]{,8}' /etc/american-dictionary ---> 	cerca le parole che contengono
+																il 'the' che abbiano dopo qualsiasi
+																lettera alfabetica e che siano lunghe
+																al piu' 8 caratteri
+
+. grep -E '^a.*t$|^e.*z$' /usr/share/...
+
+. grep -E '(c[aeiou]){2}' /user/share/dict/...	--->	ripete cio' che c'e' nelle parentesi 
+														per quelle tot volte
+
+. \w indica tutte le parole alfanumeriche
+. \W indica gli altri caratteri
+
+. grep -E 'la[[:alpha]]*' file.txt
+. grep -E '\<la[[:alpha]]*' file.txt	---> prende in consideraizone parole che iniziano in LA
+
+. sed -r(egular) 's/\b/|/g'	--->	qui sed mette ad inizio e fine di ogni parola il |
+									-r per le regex
+									s per replacement
+									\b per indicare tutte le parole alfanumeriche
+									\B se volessimo ogni singolo carattere spazi esclusi
+									/g messo per tabulare la fine di ogni parola
+
+
+. grep -E '([aeiou])([[:alpha:]])l\1\2' file.txt ---> 

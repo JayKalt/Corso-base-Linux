@@ -1,0 +1,44 @@
++---------------------+
+comando: echo
+parametri: -e
+
+utilizzo base per stampare a video
+leggi il man
+
+variabili $USER, $PATH e $((operazione))
++---------------------+
+
+
++---------------------+
+comando: cat
+parametri: -n
+
+comando: more
+comando: less, volendo con tasto H si entra nel menu
+nota: altamente consigliato per lunghi file (es. analisi forense)
+scrivendo un numero mentre si e' in less si avanza di quelle linee
+
+comando: head/tail
+parametri: -n[numero] oppure solo -[numero]
+parametri: -q, toglie la divisone tra file. Esempio su /var/log/
++---------------------+
+
++---------------------+
+comando: cut - taglio verticale
+parametri: -c
+
+esempi:
+- cut -c[numero]
+- cut -c[numero],[numero]
+- cut -c[numero]-[numero]
+
+tuttavia non e' utile in questo modo perche' i file non sono organizzati
+spesso e volentieri
+
++---------------------+
+
+
++---------------------+
+comando: grep
+parametri: -v, -i, -n, -c, -r, -w
++---------------------

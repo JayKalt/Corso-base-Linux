@@ -1,0 +1,28 @@
++---------------------+
+comando: nano
+parametri: nessuno
+
+apertura dinamica e menu
++---------------------+
+
+
++---------------------+
+comando: sort
+parametri: -r, -n (per tutte le stringhe)
+
+comando: uniq (ripetizioni consecutive)
+paremtri: -i, -d, -c
++---------------------+
+
+
++---------------------+
+comando: wc (conta un po di cose di un file)
+parametri: -l, -w, -c/m
++---------------------+
+
+
++---------------------+
+comando: rev
++---------------------+
+
+

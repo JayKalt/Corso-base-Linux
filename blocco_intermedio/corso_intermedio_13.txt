@@ -1,0 +1,37 @@
+reindirizzamento del testo (gia visto):
+"testo" >  file
+"testo" >> file
+
+2> ridirezionare errori
+&> ridirezionare errori e messaggi
+esempio utile 
+
+mkdir test3
+cp test3 ./copia
+cp test3 ./copia 2> errore.txt
+cp test3 ./copia 2>> errore.txt
+
+cp test3 ./copia 2> /dev/null
+
+/dev/null e' un file virtuale che ha la caratteristica di non 
+memroizzare i dati che vengono inseriti
+
+
++------------------------------------------------------------+
+
+PIPE
+
+questo segno permette di prendere l'output di un comando ed
+utilizzarlo come input del successivo
+
+echo "ciao a tutti" | wc
+
+solo l'ultimo comando viene mostrato a monitor
+grep -w spidyg /etc/passwd | cut -d ":" -f1 | sort
+
+altri esempi:
+du -sh /* 2>/dev/null
+du -sh /* 2>/dev/null | sort -h
+du -sh /* 2>/dev/null | sort -h | tail -n1
+
+
