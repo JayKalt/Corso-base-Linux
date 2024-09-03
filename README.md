@@ -6,7 +6,7 @@ Il corso e' suddiviso in 3 parti:
 
 Canale di riferimento: https://www.youtube.com/@Roby_Kali
 
-Questo corso e' reso possibile grazie a Roby7979 e al suo staff che si impegnano ogni giorno nella creazione di contenuti educational nel mondo dell'informatica.
+Questo corso e' reso possibile grazie a Roby7979 e al suo staff che si impegnano ogni giorno nella creazione di contenuti educational nel mondo dell'informatica
 Canale di riferimento: https://www.youtube.com/@Roby_Kali
 
 Playlist di riferimento: https://www.youtube.com/playlist?list=PLKZZXjqZrqQvfAhgY7Nit5ynpK3kN_3tx
